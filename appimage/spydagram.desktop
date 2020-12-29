@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=spydagram
+Exec=spydagram
+Comment= TBD
+Icon=python
+Categories=System;
+Terminal=true

@@ -18,5 +18,10 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    entry_points={
+        'console_scripts': [
+            'spydagram=spydagram:spydagram_helloWorld',
+            ],
+    },
     python_requires='>=3.6',
 )
