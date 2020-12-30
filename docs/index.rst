@@ -56,3 +56,11 @@ License
 --------
 
 This projects is licensed under the MIT license, se LICENSE for more details.
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :numbered:
+
+    source/DeveloperGuide
+    source/UserGuide
