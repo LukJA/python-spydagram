@@ -1,5 +1,6 @@
 # python-spydagram
 
 [![Documentation Status](https://readthedocs.org/projects/python-spydagram/badge/?version=latest)](https://python-spydagram.readthedocs.io/en/latest/?badge=latest)
+![Tests](https://github.com/LukJA/python-spydagram/workflows/System%20Tests/badge.svg?branch=main)
 
 [Read The Docs Here](https://python-spydagram.readthedocs.io/)

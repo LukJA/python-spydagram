@@ -9,14 +9,15 @@ sphinx:
   configuration: docs/conf.py
 
 # Build documentation with MkDocs
-#mkdocs:
+# mkdocs:
 #  configuration: mkdocs.yml
 
 # Optionally build your docs in additional formats such as PDF
-#formats:
-#  - pdf
+formats:
+  - pdf
 
 # Optionally set the version of Python and requirements required to build your docs
+# Note, RTD already has the theme by default (requirements not strictly needed)
 python:
   version: 3.7
   install:
