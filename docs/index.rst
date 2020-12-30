@@ -1,41 +1,58 @@
 python-spydagram
 ================
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
 
-Look how easy it is to use:
-
-    import project
-    # Get your stuff done
-    project.do_stuff()
 
 Features
---------
+-----------
 
-- Be awesome
-- Make things faster
+Diagram and scientific sketch .SVG vector image generator, designed to be as fast as free-hand drawing.
+Available as a Python library, or as a scripting language and command-line compiler.
 
-Installation
-------------
+[ Code ] -> [ Image ] TBD
 
-Install $project by running:
+Basic Installation
+------------------
 
-    install project
+Install Python library (requires >= python 3.7):
 
-Contribute
-----------
+.. code-block:: bash
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+    pip install spydagram
 
-Support
--------
+Use library as such (TBD):
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+.. code-block:: python
+
+    import spydagram as spy
+
+    sketch = spy.new(spy.graph.2D())
+    sketch.print("sketch.svg")
+
+The CLI is included and installed alongside the Python library:
+
+.. code-block:: bash
+
+    spydagram -i "script.txt" -o "sketch.svg"
+
+
+Alternatively, a pre-packaged `AppImage <https://appimage.org/>`_ version with a Python interpreter included can be obtained from the `releases <https://github.com/LukJA/python-spydagram/releases>`_ page, for systems where a python3 interpreter is not available.
+
+.. code-block:: bash
+
+    ./spydagram-x86_64.AppImage -i "script.txt" -o "sketch.svg"
+
+
+Note: you may need to make the AppImage file executable on your system.
+
+Contributions
+-------------
+
+Contributions are welcome, given the early stage of development please get in touch on the discussions board or via email directly.
+
+* Source Code: `<github.com/LukJA/python-spydagram>`_
 
 License
--------
+--------
 
-The project is licensed under the BSD license.
+This projects is licensed under the MIT license, se LICENSE for more details.
