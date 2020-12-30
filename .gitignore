@@ -136,3 +136,4 @@ dmypy.json
 
 # project specific
 token.txt
+.vscode/settings.json
