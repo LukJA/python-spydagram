@@ -6,9 +6,9 @@ def test_spydagram_true():
     assert(spy._init_True())
 
 def test_sketchImport():
-    sk = spy.sketch()
+    sk = spy.sketch(None)
     assert (sk._helloWorld() == "Hello Sketch!")
 
 def test_diagramImport():
-    sk = spy.diagram()
+    sk = spy.diagram(None)
     assert (sk._helloWorld() == "Hello Diagram!")

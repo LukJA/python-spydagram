@@ -23,5 +23,8 @@ setuptools.setup(
             'spydagram=spydagram:spydagram_helloWorld',
             ],
     },
+    install_requires=[
+          'pycairo',
+      ],
     python_requires='>=3.6',
 )

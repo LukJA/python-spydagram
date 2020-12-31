@@ -28,10 +28,11 @@ class sketch:
 
     # Collect the drawing libraries
 
-    def __init__(self, filename: str, size: coordinate = (100, 100)):
-        filename = filename.split('.')[0] + ".svg"
+    def __init__(self,  filename: str = None, 
+                        size: coordinate = (100, 100)):
+ 
         self.size = _coord(size[0], size[1])
-        self._surface = cairo.SVGSurface(filename, self.size.x , self.size.y)
+        self._surface = cairo.SVGSurface(filename, self.size.x , self.size.y) # None -> no output by default
         self._ctx = cairo.Context(self._surface)
 
         self._ctx.scale(self.size.x , self.size.y)  # Normalizing the canvas
