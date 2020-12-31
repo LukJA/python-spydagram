@@ -57,8 +57,15 @@ License
 
 This projects is licensed under the MIT license, se LICENSE for more details.
 
+Notes
+-----
+
+Depends on pyCairo, which depends on...
+libcairo2 libcairo2-dev libjpeg-dev libgif-dev pkg-config python3-dev
+
+
 .. toctree::
     :hidden:
-    
+
     source/DeveloperGuide
     source/UserGuide
