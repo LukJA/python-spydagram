@@ -15,7 +15,7 @@ export APPIMG_RELDIR=$(pwd)
 python -m python_appimage build app ./appimage --python-version=3.7
 unset APPIMG_RELDIR
 # to run
-./example_pkg-x86_64.AppImage
+./spydagram-x86_64.AppImage
 
 # (replace local link)
 pip install -e .
