@@ -137,7 +137,8 @@ Building the AppImage is fiddly, but is done as follows;
     # to run
     $ ./spydagram-x86_64.AppImage
 
-**entrypoint.sh**
+entrypoint.sh
+^^^^^^^^^^^^^
 
 .. literalinclude:: ../../appimage/entrypoint.sh
 
@@ -146,7 +147,8 @@ it to use the included python ``{{ Python-executable }}`` to run our app in modu
 ``-m spydagram``. The call ``"$@"`` tells it to pass any argument we give the AppImage on
 to our module.
 
-**requirements.txt**
+requirements.txt
+^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../../appimage/requirements.txt
 
@@ -159,13 +161,24 @@ the directory order of pip and requirements is known to be buggy, so during the 
 we set an environment variable ``export APPIMG_RELDIR=$(pwd)`` so that python-appimage and pip
 are able to find our package.
 
-**spydagram.appdata.xml**
+spydagram.appdata.xml
+^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../../appimage/spydagram.appdata.xml
+    :language: XML
 
-**spydagram.desktop**
+``spydagram.appdata.xml`` contains the `AppStream <https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html#sect-Quickstart-DesktopApps>`_
+metadata information, a standardized format for file managers and app-stores to access information 
+that describes the functionality.
+
+spydagram.desktop
+^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../../appimage/spydagram.desktop
+    :linenos: 
+
+``spydagram.desktop`` holds the `desktop entry file <https://specifications.freedesktop.org/desktop-entry-spec/latest/apa.html>`_
+information, that instructs OSs on how to manage and display the app as a desktop executable.
 
 
 
