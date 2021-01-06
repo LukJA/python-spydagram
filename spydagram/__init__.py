@@ -1,11 +1,30 @@
 import cairo
+import argparse
 
 # Import testing clause
 def _init_True():
     return True
 
 def spydagram_helloWorld():
-    print("Hellow Spydagram!")
+    print("Hello Spydagram!")
+
+def _cli_entrypoint():
+    '''Entry point for the CLI
+    '''
+    # Parse arguments
+    parser = argparse.ArgumentParser(
+        prog='spydagram',
+        description='Generate an SVG digram from a script file')
+    
+    parser.add_argument("-if", '--inputfile', type=str,
+                        help='Name of the input file')
+    
+    parser.add_argument("-of", '--outputfile', type=str,
+                        help='Name of the output file')
+
+    args = parser.parse_args()
+    print(args.inputfile, args.outputfile)
+
 
 class _coord:
     def __init__(self, x: int, y: int):

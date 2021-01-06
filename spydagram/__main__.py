@@ -1,4 +1,4 @@
-from . import spydagram_helloWorld
+from . import _cli_entrypoint
 
 if __name__ == "__main__":
-    spydagram_helloWorld()
+    _cli_entrypoint()

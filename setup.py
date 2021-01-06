@@ -20,7 +20,7 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'spydagram=spydagram:spydagram_helloWorld',
+            'spydagram=spydagram:_cli_entrypoint',
             ],
     },
     install_requires=[
