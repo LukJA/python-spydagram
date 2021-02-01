@@ -1,6 +1,9 @@
-class d2:
-    def __init__(self, arg = None):
-        self.arg = arg
+from spydagram.app import stamp 
+
+class d2(stamp):
+    def __init__(self, fname, lname, subparam):
+        super().__init__(fname, lname)
+        self.subparam = subparam
     
-    def returnTrue(self):
-        return True
+    def childFunc():
+        print(self.subparam)

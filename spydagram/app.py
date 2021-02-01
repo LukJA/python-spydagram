@@ -62,8 +62,19 @@ class sketch:
     def _helloWorld(self):
         return "Hello Sketch!"
 
-    def stamp(self, templ):
-        return templ.returnTrue()
+    def stamp(self, stamp):
+        return stamp.seal()
+
+class stamp:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+    def seal(self):
+        return True
 
 
 def svgToPng():
