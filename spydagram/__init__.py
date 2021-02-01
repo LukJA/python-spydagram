@@ -1,5 +1,6 @@
 import cairo
 import argparse
+from math import pi
 
 # Import testing clause
 def _init_True():
@@ -48,37 +49,42 @@ class sketch:
     # Collect the drawing libraries
 
     def __init__(self,  filename: str = None, 
-                        size: coordinate = (100, 100)):
+                        size: coordinate = (1000, 1000)):
  
         self.size = _coord(size[0], size[1])
+        self.filename = filename
         self._surface = cairo.SVGSurface(filename, self.size.x , self.size.y) # None -> no output by default
         self._ctx = cairo.Context(self._surface)
+        self._ctx.save()
 
         self._ctx.scale(self.size.x , self.size.y)  # Normalizing the canvas
 
     def print(self):
+        self._ctx.restore()
+        self._ctx.show_page()
         return self._surface.finish()
 
     def _tutorial_sketch(self):
-        self._ctx.scale(self.size.x , self.size.y)
         self._ctx.set_line_width(0.04)
 
-        x, y = 0.1, 0.5
-        x1, y1 = 0.4, 0.9
-        x2, y2 = 0.6, 0.1
-        x3, y3 = 0.9, 0.5
+        xc = 0.5
+        yc = 0.5
+        radius = 0.4
+        angle1 = 45.0 * (pi / 180.0)  # angles are specified
+        angle2 = 180.0 * (pi / 180.0)  # in radians
 
-        self._ctx.move_to(x, y)
-        self._ctx.curve_to(x1, y1, x2, y2, x3, y3)
+        self._ctx.arc(xc, yc, radius, angle1, angle2)
         self._ctx.stroke()
 
-        self._ctx.set_source_rgba(1, 0.2, 0.2, 0.6)
+        # draw helping lines
+        self._ctx.set_source_rgba(1, 0.7, 0.2, 0.6)
+        self._ctx.arc(xc, yc, 0.05, 0, 2 * pi)
+        self._ctx.fill()
         self._ctx.set_line_width(0.03)
-
-        self._ctx.move_to(x, y)
-        self._ctx.line_to(x1, y1)
-        self._ctx.move_to(x2, y2)
-        self._ctx.line_to(x3, y3)
+        self._ctx.arc(xc, yc, radius, angle1, angle1)
+        self._ctx.line_to(xc, yc)
+        self._ctx.arc(xc, yc, radius, angle2, angle2)
+        self._ctx.line_to(xc, yc)
         self._ctx.stroke()
     
 
