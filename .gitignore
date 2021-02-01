@@ -138,3 +138,4 @@ dmypy.json
 token.txt
 .vscode/settings.json
 tests_integ/dev.py
+sketch.svg
