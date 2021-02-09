@@ -5,5 +5,14 @@ class d2(stamp):
         super().__init__(fname, lname)
         self.subparam = subparam
     
+    def childFunc(self):
+        print(self.subparam)
+
+
+class d3(stamp):
+    def __init__(self, fname, lname, subparam):
+        super().__init__(fname, lname)
+        self.subparam = subparam
+    
     def childFunc():
         print(self.subparam)
